@@ -1,6 +1,14 @@
-# zkSync Hardhat project
+# Intro to Layer 2s
 
-This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zksync-cli).
+This repository contains all the code examples used in the "Introduction to L2s" workshop.
+
+## POAP NFTs
+
+To receive a POAP NFT for completing this workshop, you need to follow the intructions mentioned during the workshop.
+
+## zkSync CLI
+
+**This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zksync-cli).**
 
 ## Project structure
 
