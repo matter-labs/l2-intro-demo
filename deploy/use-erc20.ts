@@ -39,6 +39,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   );
 
   const AMOUNT = "12";
+  const MINT_AMOUNT = "100";
 
   // transfer tokens
   const transferHandle = await tokenContract.transfer(
@@ -50,4 +51,19 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   await transferHandle.wait();
 
   console.log(`Transfer completed in trx ${transferHandle.hash}`);
+
+  console.log(`Current token supply is ${await tokenContract.totalSupply()}`);
+
+  // mint tokens
+  const mintHandle = await tokenContract.mint(
+    DESTINATION_WALLET,
+    ethers.utils.parseEther(MINT_AMOUNT)
+  );
+
+  console.log(`Mint completed in trx ${mintHandle.hash}`);
+
+  // Wait until the transaction is processed on zkSync
+  await transferHandle.wait();
+
+  console.log(`Current token supply is ${await tokenContract.totalSupply()}`);
 }
