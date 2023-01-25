@@ -16,10 +16,10 @@ if (!PRIVATE_KEY)
 import * as ContractArtifact from "../artifacts-zk/contracts/zkToken.sol/zkToken.json";
 
 // Address of the contract on zksync testnet
-const TOKEN_ADDRESS = "";
+const TOKEN_ADDRESS = "0x40CbBbcF8CD703335664933AE7E3A44c2B7b5fEf";
 
 // 0x address of the destination wallet
-const DESTINATION_WALLET = "";
+const DESTINATION_WALLET = "0x466ff3c5C76445823b49dF047d72663B8eAe9272";
 
 if (!TOKEN_ADDRESS) throw "⛔️ ERC20 token address not provided";
 
@@ -39,7 +39,16 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   );
 
   const AMOUNT = "12";
-  const MINT_AMOUNT = "100";
+  console.log(
+    `Account ${signer.address} balance is: ${await tokenContract.balanceOf(
+      signer.address
+    )} tokens`
+  );
+  console.log(
+    `Account ${DESTINATION_WALLET} balance is: ${await tokenContract.balanceOf(
+      DESTINATION_WALLET
+    )} tokens`
+  );
 
   // transfer tokens
   const transferHandle = await tokenContract.transfer(
@@ -51,19 +60,16 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   await transferHandle.wait();
 
   console.log(`Transfer completed in trx ${transferHandle.hash}`);
-
-  console.log(`Current token supply is ${await tokenContract.totalSupply()}`);
-
-  // mint tokens
-  const mintHandle = await tokenContract.mint(
-    DESTINATION_WALLET,
-    ethers.utils.parseEther(MINT_AMOUNT)
+  console.log(
+    `Account ${signer.address} balance now is: ${await tokenContract.balanceOf(
+      signer.address
+    )} tokens`
   );
-
-  console.log(`Mint completed in trx ${mintHandle.hash}`);
-
-  // Wait until the transaction is processed on zkSync
-  await transferHandle.wait();
+  console.log(
+    `Account ${DESTINATION_WALLET} balance now is: ${await tokenContract.balanceOf(
+      DESTINATION_WALLET
+    )} tokens`
+  );
 
   console.log(`Current token supply is ${await tokenContract.totalSupply()}`);
 }
