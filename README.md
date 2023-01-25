@@ -46,7 +46,7 @@ An last, the networks are defined with the following parameters:
 
 The `url` and `ethNetwork` are the RPC endpoints of the L2 and L1 and the `zksync` flag is used to indicate Hardhat if it should use the zksync compiler.
 
-### 3. Deploy and interact with the `Greeter` contract
+### 3. Deploy and verify the `Greeter` contract
 
 The zkSync-CLI sample project includes a `Greeter` contract and a deploy script. The greeter contract stores a message on chain which can be retrieved by calling the read method `greet()` and can be updated by calling the method `setGreeting(_message)`.
 
@@ -54,13 +54,15 @@ To compile the contract, run `yarn hardhat compile`. You'll notice that the fold
 
 To deploy the contract, just set your wallet's private key in the `.env` file (you'll have to rename it first), and run the command `yarn hardhat deploy-zksync --script deploy-greeter.ts`
 
+To verify the contract you can use the [zkSync Explorer](https://goerli.explorer.zksync.io/)
+
 ### 4. Create and deploy an ERC20 contract
 
-To showcase the compatibility with standards, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract. We'll choose an ERC20, Burnable, Pausable. We can take the contract and put it in the `contracts` folder as is (check out file [zkToken.sol](./contracts/zkToken.sol)). To compile the contract, we just have to run `yarn hardhat compile`.
+To showcase the compatibility with standard contracts, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract. We'll choose an ERC20, Burnable, Pausable. We can take the contract and put it in the `contracts` folder as is (check out file [zkToken.sol](./contracts/zkToken.sol)). To compile the contract, we just have to run `yarn hardhat compile`.
 
 ### 5. Create and deploy an ERC721 contract
 
-To showcase the compatibility with standards, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC721 contract.
+To showcase the compatibility with standard contracts, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC721 contract.
 
 ## POAP NFTs
 
