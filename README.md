@@ -56,7 +56,7 @@ To deploy the contract, just set your wallet's private key in the `.env` file (y
 
 ### 4. Create and deploy an ERC20 contract
 
-To showcase the compatibility with standards, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract.
+To showcase the compatibility with standards, we'll use the [OpenZeppeling contract wizard](https://wizard.openzeppelin.com/#erc20) to create an ERC20 contract. We'll choose an ERC20, Burnable, Pausable. We can take the contract and put it in the `contracts` folder as is (check out file [zkToken.sol](./contracts/zkToken.sol)). To compile the contract, we just have to run `yarn hardhat compile`.
 
 ### 5. Create and deploy an ERC721 contract
 
