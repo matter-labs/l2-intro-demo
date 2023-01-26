@@ -34,7 +34,7 @@ On the other hand, here are a few other faucets that you can use:
 
 The zkSync CLI tool is the easiest way to start developing applications and smart contracts on zkSync. You can [find the documentation here](https://v2-docs.zksync.io/api/tools/zksync-cli/).
 
-To install it, just run `npm i -g zksync-cli@latest`.
+To install it, just run `sudo npm i -g zksync-cli@latest` (enter your system password).
 
 To create a new project, just run `zksync-cli create NAME_OF_YOUR_PROJECT`. This will create a new folder with the project name and download a sample project inside it.
 
@@ -43,12 +43,11 @@ It's very similar to any other Hardhat project, but the `hardhat.config.ts` file
 First, it imports a few dependencies used to compile and deploy our contracts:
 
 ```typescript
-//
 import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-deploy";
 ```
 
-Secondly, it includes the `zksolc` object which contains the properties of the compiler. Learn more about the [zksolc configuration here](https://v2-docs.zksync.io/api/hardhat/plugins.html#hardhat-zksync-solc).
+Secondly, it includes the `zksolc` object which contains the properties of the compiler. It comes with the minimal configuration but you can learn more about the [zksolc configuration here](https://v2-docs.zksync.io/api/hardhat/plugins.html#hardhat-zksync-solc).
 
 An last, the networks are defined with the following parameters:
 
