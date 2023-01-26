@@ -17,7 +17,7 @@ import * as ContractArtifact from "../artifacts-zk/contracts/zkToken.sol/zkToken
 // Address of the contract on zksync testnet
 const TOKEN_ADDRESS = "";
 
-// 0x address of the destination wallet
+// 0x address of the wallet that will receive a transfer
 const DESTINATION_WALLET = "";
 
 if (!TOKEN_ADDRESS) throw "⛔️ ERC20 token address not provided";

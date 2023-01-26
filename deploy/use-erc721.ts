@@ -16,7 +16,7 @@ import * as ContractArtifact from "../artifacts-zk/contracts/zkNFT.sol/zkNFT.jso
 // Address of the contract on zksync testnet
 const NFT_TOKEN_ADDRESS = "";
 
-// 0x address of the destination wallet
+// 0x address where tokens will be minted to
 const DESTINATION_WALLET = "";
 
 if (!NFT_TOKEN_ADDRESS) throw "⛔️ ERC721 token address not provided";
