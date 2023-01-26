@@ -78,8 +78,8 @@ We'll choose an ERC20, Burnable, Pausable and Snapshot. We can copy the contract
 
 To compile the contract, just run `yarn hardhat compile` again.
 
-The included [`deploy-erc20.ts`](./deploy/deploy-erc20.ts) script will deploy this contract.
-The included [`use-erc20.ts`](./deploy/use-erc20.ts) script will do a transfer of tokens between two accounts and return its balances.
+- The included [`deploy-erc20.ts`](./deploy/deploy-erc20.ts) script will deploy this contract.
+- The included [`use-erc20.ts`](./deploy/use-erc20.ts) script will do a transfer of tokens between two accounts and return its balances.
 
 ### 5. Create and deploy an ERC721 contract
 
@@ -89,8 +89,8 @@ We'll select the following options: Mintable (with auto increments), Burnable, E
 
 To compile the contract, just run `yarn hardhat compile` again.
 
-The included [`deploy-erc721.ts`](./deploy/deploy-erc721.ts) script will deploy this contract.
-The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
+- The included [`deploy-erc721.ts`](./deploy/deploy-erc721.ts) script will deploy this contract.
+- The included [`use-erc721.ts`](./deploy/use-erc721.ts) script will mint a new NFT and return the total supply and balance.
 
 ## Project structure
 
