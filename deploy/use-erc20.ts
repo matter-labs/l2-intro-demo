@@ -16,10 +16,10 @@ if (!PRIVATE_KEY)
 import * as ContractArtifact from "../artifacts-zk/contracts/zkToken.sol/zkToken.json";
 
 // Address of the contract on zksync testnet
-const TOKEN_ADDRESS = "0x40CbBbcF8CD703335664933AE7E3A44c2B7b5fEf";
+const TOKEN_ADDRESS = "";
 
 // 0x address of the destination wallet
-const DESTINATION_WALLET = "0x466ff3c5C76445823b49dF047d72663B8eAe9272";
+const DESTINATION_WALLET = "";
 
 if (!TOKEN_ADDRESS) throw "⛔️ ERC20 token address not provided";
 
